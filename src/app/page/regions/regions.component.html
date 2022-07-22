@@ -1,1 +1,16 @@
-<p>regions works!</p>
+<h1 class="mt-2">Les régions de France</h1>
+
+<table class="table mt-5 table-striped table-hover">
+  <thead class="table-dark">
+  <tr>
+    <th scope="col">Nom des régions</th>
+    <th scope="col">Code</th>
+  </tr>
+  </thead>
+  <tbody *ngIf="regionApiRequest">
+  <tr *ngFor="let region of regionApiRequest">
+    <th scope="row">{{ region.nom }}</th>
+    <td>{{ region.code }}</td>
+  </tr>
+  </tbody>
+</table>
