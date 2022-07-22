@@ -1,3 +1,10 @@
+h1 {
+  color: rgb(111, 162, 160);
+}
 
+.table-pailette-reg {
+  background: linear-gradient(90deg, rgb(111, 162, 160) 0%, rgb(210, 204, 134) 50%, rgb(237, 155, 155) 100%);
+  color: #fff;
+}
 
 /*# sourceMappingURL=regions.component.css.map */

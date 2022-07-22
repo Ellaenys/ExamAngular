@@ -1,14 +1,14 @@
 <h1 class="mt-2">Les départements de France</h1>
 
 <table class="table mt-5 table-striped table-hover">
-  <thead class="table-dark">
+  <thead class="table-pailette-dept">
   <tr>
     <th scope="col">Nom des départements</th>
     <th scope="col" class="text-center">Code</th>
     <th scope="col" class="text-center">Code Région</th>
   </tr>
   </thead>
-  <tbody *ngIf="departementApiRequest">
+  <tbody *ngIf="departementApiRequest; else loading">
   <tr *ngFor="let dept of departementApiRequest">
     <th scope="row">{{ dept.nom }}</th>
     <td class="text-center">{{ dept.code }}</td>
@@ -16,3 +16,7 @@
   </tr>
   </tbody>
 </table>
+
+<ng-template #loading>
+  <div class="loading">Chargement en cours..</div>
+</ng-template>
